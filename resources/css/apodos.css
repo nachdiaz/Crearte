@@ -1,0 +1,230 @@
+  .teaser {
+      background-image: url(../img/teaser-apodos.jpg);
+  }
+
+  main {
+      background-color: var(--grey7);
+  }
+
+  .disclaimer {
+      display: none;
+  }
+
+  h3 {
+      font-family: 'Montserrat', 'Ubuntu', sans-serif;
+  }
+
+  .listado {
+
+      margin-top: 1rem;
+      padding: 1rem;
+      background: whitesmoke;
+  }
+
+  .listado article {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      grid-gap: 1rem;
+      position: relative;
+      padding-top: 2rem;
+  }
+
+  .listado article + article {
+      margin-top: 1rem;
+
+  }
+
+  .listado article:empty {
+      margin-top: 0;
+      padding-top: 0;
+  }
+
+  .listado article h3 {
+      grid-column: 1/-1;
+  }
+
+  .listado__añadir {
+      padding: 1rem;
+      border-radius: .5rem;
+      width: 25rem;
+  }
+
+  .listado__card {
+      background: var(--primary);
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 7px 6px 11px 0px var(--grey6);
+  }
+
+
+  .listado__card p {
+      margin-bottom: .7em;
+      color: white;
+      font-weight: 700;
+      font-size: 2rem;
+
+  }
+
+  .listado__card footer {
+      border-top: solid 1px white;
+      text-align: right;
+  }
+
+  .listado__card footer button {
+      color: white;
+  }
+
+  .listado #XS div:first-of-type:before {
+      content: 'Talle XS';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #S div:first-of-type:before {
+      content: 'Talle S';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #M div:first-of-type:before {
+      content: 'Talle M';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #MM div:first-of-type:before {
+      content: 'Talle MM';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #L div:first-of-type:before {
+      content: 'Talle L';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #XL div:first-of-type:before {
+      content: 'Talle XL';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .listado #XXL div:first-of-type:before {
+      content: 'Talle XXL';
+      font-weight: 700;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .d-flex {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .recomendaciones {
+      padding: 1rem;
+  }
+
+  .recomendaciones ul {
+
+      list-style-position: inside;
+  }
+
+  .recomendaciones ul li svg {
+      display: block;
+      height: 1rem;
+  }
+
+  @media print {
+      main {
+          background: white;
+          height: unset;
+      }
+
+      header,
+      footer,
+      .footer,
+      .teaser,
+      .insertar-apodos,
+      .m-descargar,
+      template {
+          display: none;
+          visibility: hidden;
+      }
+
+
+      h2 {
+          margin-top: 0;
+          text-align: left;
+          padding: 0;
+      }
+
+
+      main .listado article {
+          margin-top: 1rem;
+          border: solid 1px;
+          padding: 2rem 1rem 1rem 1rem;
+          grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+          position: relative;
+      }
+
+      main .listado article:before {
+          content: attr(data-before);
+          position: absolute;
+          top: .5rem;
+          right: .5rem;
+          color: red;
+      }
+
+      main .listado article:empty {
+          border: none;
+          padding: 0;
+      }
+
+      main .listado div:first-of-type:before {
+          top: .5rem !important;
+          left: .5rem !important;
+      }
+
+      main .listado .listado__card {
+          background: none;
+          box-shadow: none;
+
+      }
+
+      main .listado .listado__card p {
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          color: var(--grey3);
+          margin: 0;
+      }
+
+      .disclaimer {
+          display: block;
+      }
+
+  }

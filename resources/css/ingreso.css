@@ -1,0 +1,6 @@
+.teaser {
+    background-image: url(../img/teaser-index.jpg);
+}
+main {
+    background-color: var(--grey7);
+}

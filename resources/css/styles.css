@@ -34,8 +34,12 @@ button {
     outline: none;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 main {
-    background-color: var(--grey7);
     min-height: calc(100vh - 16.9rem);
 }
 
@@ -46,34 +50,54 @@ body {
     min-height: 100vh;
 }
 
-header {
+.header {
     background: var(--secondary);
+    border-bottom: solid 5px var(--primary)
 }
 
-header nav {
+.header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: .5rem 1rem;
     flex-wrap: wrap;
 }
 
-header nav ul {
+.header nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     list-style: none;
 }
 
-header nav img {
+.header nav img {
     width: 7rem;
 
 }
 
-header nav ul li a {
+.header .ingreso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .ingreso span {
+    color: white;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header .ingreso svg {
+    height: 2rem;
+    width: 2rem;
+    margin-right: .5rem;
+}
+
+.header nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: .5rem 1rem;
     font-weight: 400;
     font-size: 1rem;
     display: block;
@@ -81,8 +105,14 @@ header nav ul li a {
 
 }
 
-header nav ul li a.active {
+.header nav ul li a.active {
     font-weight: 500;
+}
+
+@media(min-width:500px) {
+    .header nav {
+        justify-content: space-between;
+    }
 }
 
 .teaser {
@@ -92,6 +122,7 @@ header nav ul li a.active {
     align-items: center;
     background-size: cover;
     background-position: center;
+    padding: 1rem 2rem;
 }
 
 .teaser h1 {
@@ -116,164 +147,38 @@ h2 {
     font-family: 'Montserrat', 'Ubuntu', sans-serif;
     font-weight: 700;
     text-align: center;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 h2 + p {
     text-align: center;
-}
-
-h3 {
-    font-family: 'Montserrat', 'Ubuntu', sans-serif;
-}
-
-.listado {
-
-    margin-top: 1rem;
-    padding: 1rem;
-    background: whitesmoke;
-}
-
-.listado article {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    grid-gap: 1rem;
-    position: relative;
-    padding-top: 2rem;
-}
-
-.listado article + article {
-    margin-top: 1rem;
-
-}
-
-.listado article:empty {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.listado article h3 {
-    grid-column: 1/-1;
-}
-
-.listado__añadir {
-    padding: 1rem;
-    border-radius: .5rem;
-    width: 25rem;
-}
-
-.listado__card {
-    background: var(--primary);
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 7px 6px 11px 0px var(--grey6);
-}
-
-
-.listado__card p {
-    margin-bottom: .7em;
-    color: white;
-    font-weight: 700;
-    font-size: 2rem;
-
-}
-
-.listado__card footer {
-    border-top: solid 1px white;
-    text-align: right;
-}
-
-.listado__card footer button {
-    color: white;
-}
-
-.listado #XS div:first-of-type:before {
-    content: 'Talle XS';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #S div:first-of-type:before {
-    content: 'Talle S';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #M div:first-of-type:before {
-    content: 'Talle M';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #MM div:first-of-type:before {
-    content: 'Talle MM';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #L div:first-of-type:before {
-    content: 'Talle L';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #XL div:first-of-type:before {
-    content: 'Talle XL';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.listado #XXL div:first-of-type:before {
-    content: 'Talle XXL';
-    font-weight: 700;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    color: var(--grey3);
+    margin-bottom: 1rem;
 }
 
 .form-item {
-    position: relative;
-
+    margin-top: .3rem;
 }
 
 .form-item label {
-    margin-top: .7rem;
     display: block;
     color: var(--secondary);
 }
 
 .form-item input,
-.form-item select {
-    margin-top: 0.2rem;
+.form-item select,
+.form-item textarea {
     display: block;
+    border: solid 1px var(--grey5);
+    height: 1.7rem;
+    border-radius: .3rem;
     width: 100%;
-    height: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 0.2rem;
-    padding: 0.1rem 0.5rem;
+    padding: 0 .3rem;
 }
 
 .form-item input:focus,
-.form-item select:focus {
+.form-item select:focus,
+.form-item textarea:focus {
     border-bottom: solid 3px;
     border-bottom-color: var(--secondary);
 }
@@ -313,31 +218,13 @@ h3 {
     background: var(--secondary-dark);
 }
 
-.d-flex {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-.recomendaciones {
-    padding: 1rem;
-}
-
-.recomendaciones ul {
-
-    list-style-position: inside;
-}
-
 .footer {
     background-color: var(--primary);
     padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 1rem;
+    border-top: solid 5px var(--secondary);
 }
 
 .footer img {
@@ -346,7 +233,7 @@ h3 {
 
 .footer .redes div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -379,9 +266,7 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.footer .sitemap {
-    padding: 0 1rem;
-}
+
 
 .footer .sitemap ul {
 

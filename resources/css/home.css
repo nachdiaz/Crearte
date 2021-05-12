@@ -1,0 +1,267 @@
+.teaser {
+    background-image: url(../img/teaser-index.jpg);
+    flex-wrap: wrap;
+    position: relative;
+    height: unset;
+    padding: 3rem;
+}
+
+.teaser:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .15);
+    z-index: 0;
+}
+
+.teaser h1 {
+    text-shadow: -0.35rem .35rem var(--primary), -.7rem .7rem var(--secondary);
+    width: 41rem;
+    line-height: 0.9em;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.teaser .mas {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0 3rem;
+    text-shadow: -0.35rem .35rem var(--primary), -.7rem .7rem var(--secondary);
+    position: relative;
+    line-height: 0.8em;
+    z-index: 1;
+}
+
+.teaser .bandera {
+    background: var(--secondary);
+    padding: 0.7rem;
+    border-radius: .5rem;
+    box-shadow: -.7rem .7rem var(--primary);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    width: 12rem;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    transform: rotate(-9deg);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3rem;
+}
+
+.m-hide {
+    /* You can play with the seconds to change the "animation" */
+    animation: hide .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+}
+
+.m-show {
+    /* You can play with the seconds to change the "animation" */
+    animation: show .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0);
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.imgs {
+    background: var(--grey7);
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+.imgs .imgs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4rem 2rem 3rem 3rem;
+    padding-bottom: 2rem;
+}
+
+.imgs .imgs-container img:first-of-type {
+    border-radius: .5rem;
+    box-shadow: -.7rem .7rem var(--secondary);
+    position: relative;
+    margin-top: 6rem;
+    bottom: -1rem;
+}
+
+.imgs .imgs-container img:nth-of-type(2) {
+    border-radius: .5rem;
+    box-shadow: -.7rem .7rem var(--primary);
+    position: relative;
+    margin-bottom: 6rem;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.imgs .imgs-container img:last-of-type {
+    border-radius: .5rem;
+    box-shadow: -.7rem .7rem var(--secondary);
+    position: relative;
+    margin-top: 6rem;
+    bottom: 1rem;
+
+
+}
+
+.imgs svg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.nuestros-productos {}
+
+.seguinos-instagram {
+    background: var(--grey7);
+    position: relative;
+    margin-bottom: 8rem;
+    padding: 2rem;
+}
+
+.seguinos-instagram h3 {
+    color: var(--secondary);
+    font-weight: 900;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    line-height: 0.9em;
+    text-shadow: -0.1em 0.1em var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+}
+
+.seguinos-instagram h3:before {
+    content: "_";
+    position: absolute;
+    left: -3rem;
+}
+
+.seguinos-instagram svg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.seguinos-instagram .instagram-pics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    max-width: 46rem;
+    margin: auto;
+}
+
+.seguinos-instagram .instagram-pics figure {}
+
+.seguinos-instagram .instagram-pics figure img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+
+}
+
+.contacto form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 65rem;
+    margin: auto;
+}
+
+.contacto form .form-item:last-of-type {
+    grid-column: 1/-1;
+}
+
+.contacto form .form-item:last-of-type textarea {
+    height: 5rem;
+}
+
+.contacto form .btn {
+    grid-column: 1/-1;
+    margin-bottom: 5rem;
+}
+
+@media(min-width:40rem) {
+    .seguinos-instagram h3 {
+        font-size: 3rem;
+    }
+}
+
+@media(min-width:60rem) {
+
+    .seguinos-instagram h3 {
+        font-size: 4rem
+    }
+
+    .teaser .bandera {
+
+        font-size: 2rem;
+        width: 22rem;
+    }
+
+}
+
+@media(min-width:70rem) {
+    .teaser h1 {
+        text-align: left;
+    }
+
+    .seguinos-instagram {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seguinos-instagram h3 {
+        text-align: left;
+        font-size: 4rem;
+        margin-right: 2rem;
+
+        max-width: 34rem;
+    }
+
+    .seguinos-instagram .instagram-pics {
+
+        margin: unset;
+    }
+}
+
+@media(min-width:80rem) {
+
+    .seguinos-instagram h3 {
+        font-size: 5rem
+    }
+}
