@@ -157,26 +157,26 @@
         <section class="contacto" id="contacto">
             <h2>Hablemos</h2>
             <p>Si tenés dudas, ideas o ya sabes que prenda quieren para su promo, contactanos asi te asesoramos y empezamos a preparar lo mejor de la promo</p>
-            <form action="post">
+            <form action="/gracias.php" method="post">
                 <div class="form-item">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre" required>
                 </div>
                 <div class="form-item">
                     <label for="telefono">WhatsApp/Teléfono</label>
-                    <input type="number" name="telefono">
+                    <input type="number" name="tel" required>
                 </div>
                 <div class="form-item">
                     <label for="mail">Mail</label>
-                    <input type="text" name="mail">
+                    <input type="email" name="mail" required>
                 </div>
                 <div class="form-item">
                     <label for="colegio">Colegio</label>
-                    <input type="text" name="colegio">
+                    <input type="text" name="colegio" required>
                 </div>
                 <div class="form-item">
                     <label for="provincia">Provincia</label>
-                    <select name="provincia">
+                    <select name="provincia" required>
                         <option value="Buenos Aires">Buenos Aires</option>
                         <option value="CABA">CABA</option>
                         <option value="Catamarca">Catamarca</option>
@@ -206,11 +206,11 @@
                 </div>
                 <div class="form-item">
                     <label for="localidad">Localidad</label>
-                    <input type="text" name="localidad">
+                    <input type="text" name="localidad" required>
                 </div>
                 <div class="form-item">
                     <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" placeholder="Hola Crearte, me gustaría..."></textarea>
+                    <textarea name="mensaje" placeholder="Hola Crearte, me gustaría..." required></textarea>
                 </div>
                 <button class="btn">Enviar</button>
             </form>
@@ -233,9 +233,10 @@
             <h6>Sitemap</h6>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../diseña.html">Diseñá</a></li>
-                    <li><a href="../apodos.html" class="active">Apodos</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#producto">Productos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="ingreso.html">Ingreso clientes</a></li>
                 </ul>
             </nav>
         </section>
